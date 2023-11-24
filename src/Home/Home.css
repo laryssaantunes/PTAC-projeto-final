@@ -1,0 +1,60 @@
+/* Estilos para a navbar */
+.navbar {
+    background-color: rgb(136, 94, 152);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 2px solid #8c6aae;
+  }
+  
+  .logo {
+    max-width: 50px; /* Ajuste o tamanho da logo conforme necessário */
+  }
+  
+  /* Estilos para a introdução */
+  .laryssa {
+    background-color: #9f7cbc; /* Cor de fundo da introdução */
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #ba5ecd;
+    border-radius: 5px;
+  }
+
+  .laryssa1 {
+    background-color: #9f7cbc; /* Cor de fundo da introdução */
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #ba5ecd;
+    border-radius: 5px;
+  }
+
+  .laryssa2 {
+    background-color: #9f7cbc; /* Cor de fundo da introdução */
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #ba5ecd;
+    border-radius: 5px;
+  }
+
+  .laryssa3 {
+    background-color: #9f7cbc; /* Cor de fundo da introdução */
+    text-align: center;
+    padding: 20px;
+    margin: 20px;
+    border: 2px solid #ba5ecd;
+    border-radius: 5px;
+  }
+
+  .home-card{
+  background-color: #FFFF;
+  display: inline-block;
+  width: 800px;
+  height: 1000px;
+  padding: 10px;
+  margin: 40px;
+  overflow: hidden;
+}
