@@ -24,11 +24,6 @@ export default function Todo() {
     setExibirMensagem(true); 
   }
 
-  const remover = (id) => {
-    const listaFiltrada = lista.filter((item) => item.id !== id);
-    setLista(listaFiltrada);
-  }
-
   return (
     <div className="container">
       <h1>Login</h1>
