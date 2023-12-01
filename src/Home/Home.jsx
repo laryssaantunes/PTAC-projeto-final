@@ -13,7 +13,7 @@ export default function Home() {
       </div>
 
       <div className="laryssa">
-        <h2>Bem-vindo à Nossa Lista!</h2>
+        <h2>Bem-vindo!</h2>
         <img src="https://www.selecoes.com.br/media/_versions/2023/07/maquiagem-influenciadoras-brasileiras_widemd.jpg" alt="" ></img>
         <h2>Kit de maquiagem </h2>
         <p>R$230,00 Reais</p>
