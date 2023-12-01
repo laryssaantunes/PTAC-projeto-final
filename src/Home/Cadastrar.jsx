@@ -5,11 +5,10 @@ import './Cadastrar.css';
 export default function Cadastrar() {
   const listaLocalStorage = JSON.parse(localStorage.getItem("Lista") || []);
   const [lista, setLista] = useState(listaLocalStorage ) ;
-  const [id, setId] = useState(1);
-  const [Nome, setNome] = useState([listaLocalStorage.length -1]?.id + 1 || 1);
+  const [id, setId] = useState([listaLocalStorage.length -1]?.id + 1 || 1);
   const [Imagem, setImagem] = useState("");
-  const [Idade, setIdade] = useState("");
- 
+  const [descricao, setdescricao] = useState("");
+  const [Musica, setMusica] = useState("");
 
 
   useEffect(()=> {localStorage.setItem("Lista", JSON.stringify(lista))}, [lista]);
@@ -36,16 +35,16 @@ export default function Cadastrar() {
             className="border-input"
             onChange={(e) => setNome(e.target.value)}
             type="text"
-            value={Nome}
+            value={Musica}
 
           />
-          <label htmlFor="descricao">Idade:</label>
+          <label htmlFor="descricao">Descrição:</label>
           <input
             id="descricao"
             className="border-input"
             onChange={(e) => setIdade(e.target.value)}
             type="text"
-            value={Idade}
+            value={descricao}
           />
 
           <label htmlFor="Imagem">Imagem:</label>

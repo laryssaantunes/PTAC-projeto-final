@@ -8,8 +8,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
+        <Route path= '/Cadastrar' element ={<Cadastrar/>}></Route>
         <Route path='/' element={<Home />}></Route>
         </Routes>
     </BrowserRouter>
   </React.StrictMode>
-);
+); 
