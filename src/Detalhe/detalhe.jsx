@@ -1,10 +1,6 @@
 import {useParams} from "react-router-dom";
 import Card from '../Components/Card';
-
-
 export default function Detalhe(){
-
-
     const {id} = useParams();
     const lista = JSON.parse(localStorage.getItem("Lista"))
    

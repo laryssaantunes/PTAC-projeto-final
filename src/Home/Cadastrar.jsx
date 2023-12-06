@@ -26,35 +26,61 @@ export default function Cadastrar() {
   return (
     <div className="container">
       <h1>Login</h1>
+      <Link to="/">Voltatr para o página inicial</Link>
       <h1>Informe dados da sua música favorita</h1>
       <form onSubmit={salvar}>
         <div className="input-container">
-          <label htmlFor="nome">Musica:</label>
+
+          <label htmlFor="nome">Video:</label>
           <input
-            id="Musica"
+            id="Video"
             className="border-input"
             onChange={(e) => setNome(e.target.value)}
             type="text"
-            value={Musica}
+            value={Video}
 
           />
-          <label htmlFor="descricao">Descrição:</label>
+          <label htmlFor="Descricao">Descrição:</label>
           <input
             id="descricao"
             className="border-input"
             onChange={(e) => setIdade(e.target.value)}
             type="text"
-            value={descricao}
+            value={Descricao}
           />
 
-          <label htmlFor="Imagem">Imagem:</label>
+          <label htmlFor="like">Contidade de like:</label>
           <input
-            id="Imagem"
+            id="like"
             className="border-input"
             onChange={(e) => setImagem(e.target.value)}
             type="text"
-            value={Imagem}
+            value={like}
           />
+
+          <label htmlFor="Data">Data de postagens:</label>
+          <input
+            id="Data"
+            className="border-input"
+            onChange={(e) => setImagem(e.target.value)}
+            type="text"
+            value={Data}
+          />
+
+          <label htmlFor="Nomedocanal">Nome do canal:</label>
+          <input
+            id="Nomedocanal"
+            className="border-input"
+            onChange={(e) => setImagem(e.target.value)}
+            type="text"
+            value={Nomedocanal}
+          />
+
+
+
+
+
+
 
           <button className="button">add</button>
         </div>
