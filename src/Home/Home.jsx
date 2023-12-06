@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import Header from "./Compoments/Header"
-import Card from "./Componentes/Card";
+import Header from "../Components/Header"
+import Card from "../Components/Card";
 
 export default function Home() {
   const listinhamusic = JSON.parse(localStorage.getItem ("Lista")) || []
@@ -10,7 +10,5 @@ export default function Home() {
       <Header/>
       <Card listinhamusic ={listinhamusic}/>
     </div>
-  )
-  
   );
 }
