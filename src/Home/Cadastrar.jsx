@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import './style.css';
 
 export default function Cadastrar() {
@@ -8,22 +8,29 @@ export default function Cadastrar() {
   const [id, setId] = useState([listaLocalStorage.length -1]?.id + 1 || 1);
   const [Video, setVideo] = useState("");
   const [descricao, setdescricao] = useState("");
-  const [quantidadedelike, setquantidadedelike] = useState("");
-  const [Datadepostagens, Data] = useState("");
-  const [Nomedocanal, nome] = useState("");
+  const [Quantidadedelike, setQuantidadedelike] = useState("");
+  const [Datadepostagens, setDatadepostagens] = useState("");
+  const [Nomedocanal, setNomedocanal] = useState("");
 
 
   useEffect(()=> {localStorage.setItem("Lista", JSON.stringify(lista))}, [lista]);
 
-  function salvar(e) {
+  const navigate = useNavigate();
+
+
+
+  async function salvar(e) {
     e.preventDefault();
-    setLista([...lista, { id: id, Video: Video, descriao: descricao, quantidadedelike: like, Datadepostagens: Data, Nomedocanal: nome }]);
+    await setLista([...lista, { id: id, Video: Video, descriao: descricao, Quantidadedelike: Quantidadedelike , Datadepostagens: Datadepostagens, Nomedocanal: Nomedocanal }]);
     setId(id + 1);
+    navigate("/")
     setVideo("");
-    setquantidadedelike("");
-    setData("");
-    setnome("");
+    setdescricao("")
+    setQuantidadedelike("");
+    setDatadepostagens("");
+    setNomedocanal("");
     setExibirMensagem(true);
+
   }
 
   return (
@@ -38,7 +45,7 @@ export default function Cadastrar() {
           <input
             id="Video"
             className="border-input"
-            onChange={(e) => setNome(e.target.value)}
+            onChange={(e) => setVideo(e.target.value)}
             type="text"
             value={Video}
 
@@ -47,34 +54,34 @@ export default function Cadastrar() {
           <input
             id="descricao"
             className="border-input"
-            onChange={(e) => setIdade(e.target.value)}
+            onChange={(e) => setdescricao(e.target.value)}
             type="text"
             value={descricao}
           />
 
-          <label htmlFor="like">Contidade de like:</label>
+          <label htmlFor="like">Quantidadedelike:</label>
           <input
             id="like"
             className="border-input"
-            onChange={(e) => setImagem(e.target.value)}
+            onChange={(e) => setQuantidadedelike(e.target.value)}
             type="text"
-            value={like}
+            value={Quantidadedelike}
           />
 
-          <label htmlFor="Data">Data de postagens:</label>
+          <label htmlFor="Data">Datadepostagens:</label>
           <input
             id="Data"
             className="border-input"
-            onChange={(e) => setImagem(e.target.value)}
+            onChange={(e) => setDatadepostagens(e.target.value)}
             type="text"
-            value={Data}
+            value={Datadepostagens}
           />
 
-          <label htmlFor="Nomedocanal">Nome do canal</label>
+          <label htmlFor="Nomedocanal">Nomedocanal</label>
           <input
             id="nome"
             className="border-input"
-            onChange={(e) => setImagem(e.target.value)}
+            onChange={(e) => setNomedocanal(e.target.value)}
             type="text"
             value={Nomedocanal}
           />
